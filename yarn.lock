@@ -18142,17 +18142,18 @@ listr@^0.14.1, listr@^0.14.3:
     p-map "^2.0.0"
     rxjs "^6.3.3"
 
-lmdb-store@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/lmdb-store/-/lmdb-store-1.2.4.tgz#5ffe223fb7b899b870a9055468dc908544d072ba"
-  integrity sha512-KydyC34i7BxQFeEXeX2Ub73u8Iiyf1QxLmhHMxWWWWqNFr6tk8vUnLtf8HpJmubiOWg77QZjlwbsFRKIofEHdw==
+lmdb-store@^1.6.8:
+  version "1.6.8"
+  resolved "https://registry.nlark.com/lmdb-store/download/lmdb-store-1.6.8.tgz#f57c1fa4a8e8e7a73d58523d2bfbcee96782311f"
+  integrity sha1-9XwfpKjo56c9WFI9K/vO6WeCMR8=
   dependencies:
     mkdirp "^1.0.4"
     nan "^2.14.2"
     node-gyp-build "^4.2.3"
-    weak-lru-cache "^0.4.1"
+    ordered-binary "^1.0.0"
+    weak-lru-cache "^1.0.0"
   optionalDependencies:
-    msgpackr "^1.2.7"
+    msgpackr "^1.3.7"
 
 load-bmfont@^1.3.1, load-bmfont@^1.4.0:
   version "1.4.0"
@@ -19609,20 +19610,20 @@ ms@^2.1.3:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-msgpackr-extract@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/msgpackr-extract/-/msgpackr-extract-1.0.6.tgz#65713a266de36d7dce8edcb766a7b4e5aa5f12ca"
-  integrity sha512-xDZjVWdBDQqohlB14/tbuhtFGsnQqZxE9/aJNz4iTxfGANtuajSCC6wJ72vYPR/k3hKtgLyL76E7xi6t2hcS+Q==
+msgpackr-extract@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.nlark.com/msgpackr-extract/download/msgpackr-extract-1.0.14.tgz#87d3fe825d226e7f3d9fe136375091137f958561"
+  integrity sha1-h9P+gl0ibn89n+E2N1CRE3+VhWE=
   dependencies:
     nan "^2.14.2"
     node-gyp-build "^4.2.3"
 
-msgpackr@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/msgpackr/-/msgpackr-1.2.7.tgz#374e17a294b52f2155bf3d54182a0888be286cad"
-  integrity sha512-U6Sef+XZjTRQoXZt9GPFf/2h4yhjsB2Kvb1Uq6N19wliryVvrq8onYPzgFnm9/byjDzpRWbJqXesp2AqX15Htg==
+msgpackr@^1.3.7:
+  version "1.4.4"
+  resolved "https://registry.npmmirror.com/msgpackr/download/msgpackr-1.4.4.tgz#872f03fc99eb8f8c1c99615072c7ea12205429be"
+  integrity sha1-hy8D/Jnrj4wcmWFQcsfqEiBUKb4=
   optionalDependencies:
-    msgpackr-extract "^1.0.6"
+    msgpackr-extract "^1.0.14"
 
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
@@ -20629,6 +20630,11 @@ ora@^5.3.0:
     log-symbols "^4.0.0"
     strip-ansi "^6.0.0"
     wcwidth "^1.0.1"
+
+ordered-binary@^1.0.0:
+  version "1.1.3"
+  resolved "https://registry.nlark.com/ordered-binary/download/ordered-binary-1.1.3.tgz#11dbc0a4cb7f8248183b9845e031b443be82571e"
+  integrity sha1-EdvApMt/gkgYO5hF4DG0Q76CVx4=
 
 ordered-read-streams@^1.0.0:
   version "1.0.1"
@@ -28690,10 +28696,10 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-weak-lru-cache@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/weak-lru-cache/-/weak-lru-cache-0.4.1.tgz#d1a0600f00576e9cf836d069e4dc119b8234abde"
-  integrity sha512-NJS+edQXFd9zHuWuAWfieUDj0pAS6Qg6HX0NW548vhoU+aOSkRFZvcJC988PjVkrH/Q/p/E18bPctGoUE++Pdw==
+weak-lru-cache@^1.0.0:
+  version "1.1.2"
+  resolved "https://registry.nlark.com/weak-lru-cache/download/weak-lru-cache-1.1.2.tgz#a909a97372aabdfbfe3eb33580af255b3b198834"
+  integrity sha1-qQmpc3Kqvfv+PrM1gK8lWzsZiDQ=
 
 web-namespaces@^1.0.0:
   version "1.1.4"
