@@ -1,0 +1,6 @@
+ nohup yarn build  --no-oss   --skip-os-packages  &
+ 如果提示模块版本不对，用命令重新安装
+ yarn add re2@xxx.x 
+
+
+ 编译完成后运行kibana没有解析器 vi命令 :set ff=unix

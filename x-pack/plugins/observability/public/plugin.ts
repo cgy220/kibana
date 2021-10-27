@@ -100,7 +100,7 @@ export class Plugin
 
     coreSetup.application.register({
       id: 'observability-overview',
-      title: 'Overview',
+      title:  i18n.translate('core.observability.overview.appTitle', { defaultMessage: "Overview"}),
       appRoute: '/app/observability',
       order: 8000,
       category,

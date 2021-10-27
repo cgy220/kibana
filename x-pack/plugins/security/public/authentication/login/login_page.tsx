@@ -25,6 +25,7 @@ import {
 import type { LoginState } from '../../../common/login_state';
 import { DisabledLoginForm, LoginForm } from './components';
 
+import logoSvg from  '../../../../../../src/core/public/chrome/ui/images/wzyh32-32-logo.svg' ; 
 interface Props {
   http: HttpStart;
   notifications: NotificationsStart;
@@ -73,7 +74,7 @@ export class LoginPage extends Component<Props, State> {
     if (!loginState) {
       return null;
     }
-
+    document.title = '温州银行统一日志平台'
     const isSecureConnection = !!window.location.protocol.match(/^https/);
     const { allowLogin, layout, requiresSecureConnection } = loginState;
 
@@ -94,7 +95,7 @@ export class LoginPage extends Component<Props, State> {
           <div className={contentHeaderClasses}>
             <EuiSpacer size="xxl" />
             <span className="loginWelcome__logo">
-              <EuiIcon type="logoElastic" size="xxl" />
+              <EuiIcon type={logoSvg} size="xxl" />
             </span>
             <EuiTitle size="m" className="loginWelcome__title">
               <h1>

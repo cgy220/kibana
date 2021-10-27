@@ -70,7 +70,7 @@ export class KibanaOverviewPlugin
     core.application.register({
       category: DEFAULT_APP_CATEGORIES.kibana,
       id: PLUGIN_ID,
-      title: PLUGIN_NAME,
+      title:  i18n.translate('core.overview.appTitle', { defaultMessage: PLUGIN_NAME }),
       euiIconType: PLUGIN_ICON,
       order: -2000,
       updater$: appUpdater$,

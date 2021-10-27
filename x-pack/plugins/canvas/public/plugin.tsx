@@ -6,6 +6,7 @@
  */
 
 import { BehaviorSubject } from 'rxjs';
+import { i18n } from '@kbn/i18n';
 import { ChartsPluginSetup, ChartsPluginStart } from 'src/plugins/charts/public';
 import {
   CoreSetup,
@@ -90,7 +91,7 @@ export class CanvasPlugin
     core.application.register({
       category: DEFAULT_APP_CATEGORIES.kibana,
       id: 'canvas',
-      title: 'Canvas',
+      title:  i18n.translate('core.canvas.appTitle', { defaultMessage: 'Canvas'}),
       euiIconType: 'logoKibana',
       order: 3000,
       updater$: this.appUpdater,

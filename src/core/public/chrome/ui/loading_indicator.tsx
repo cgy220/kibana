@@ -13,7 +13,7 @@ import classNames from 'classnames';
 import { Subscription } from 'rxjs';
 
 import { HttpStart } from '../../http';
-
+import logoSvg from './images/wzyh32-32-logo.svg';
 export interface LoadingIndicatorProps {
   loadingCount$: ReturnType<HttpStart['getLoadingCount$']>;
   showAsBar?: boolean;
@@ -75,7 +75,7 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
       />
     ) : (
       <EuiIcon
-        type="logoElastic"
+        type={logoSvg}
         size="l"
         data-test-subj={testSubj}
         className="chrHeaderLogo__cluster"

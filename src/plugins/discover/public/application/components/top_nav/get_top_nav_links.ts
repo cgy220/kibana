@@ -16,7 +16,8 @@ import { onSaveSearch } from './on_save_search';
 import { GetStateReturn } from '../../angular/discover_state';
 import { IndexPattern, ISearchSource } from '../../../kibana_services';
 import { openOptionsPopover } from './open_options_popover';
-
+import { test } from './redirect_html';
+ 
 /**
  * Helper function to build the top nav links
  */
@@ -39,6 +40,18 @@ export const getTopNavLinks = ({
   onOpenInspector: () => void;
   searchSource: ISearchSource;
 }) => {
+  const help = {
+    id: 'help',
+    label: i18n.translate('discover.localMenu.localMenu.helpTitle', {
+      defaultMessage: 'help',
+    }),
+    description: i18n.translate('discover.localMenu.optionsDescription', {
+      defaultMessage: 'Options',
+    }),
+    run: () =>  test(),
+
+    testId: 'discoverOptionsButton',
+  };
   const options = {
     id: 'options',
     label: i18n.translate('discover.localMenu.localMenu.optionsTitle', {
@@ -145,6 +158,7 @@ export const getTopNavLinks = ({
   };
 
   return [
+    help,
     ...(services.capabilities.advancedSettings.save ? [options] : []),
     newSearch,
     ...(services.capabilities.discover.save ? [saveSearch] : []),

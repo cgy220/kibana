@@ -14,7 +14,7 @@ export function getRootBreadcrumbs() {
   return [
     {
       text: i18n.translate('discover.rootBreadcrumb', {
-        defaultMessage: 'Discover',
+        defaultMessage: 'Discover1',
       }),
       href: '#/',
     },
