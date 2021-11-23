@@ -1,3 +1,12 @@
+ 注释了 src/dev/build/build_distributables.ts 部分打包脚本
+ options.initialize 初始化部分 ，主要功能是提供nodejs环境,生成node文件夹，
+ 可以复制编译好的kibana版本下的node复制到打包好后的包中
+ 
+ 编译步骤
+ yan kbn bootstrap
+ 调试
+ yarn start 
+ 打包
  nohup yarn build  --no-oss   --skip-os-packages  &
  如果提示模块版本不对，用命令重新安装
  yarn add re2@xxx.x 

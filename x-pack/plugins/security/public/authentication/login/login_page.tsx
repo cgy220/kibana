@@ -7,7 +7,7 @@
 
 import './login_page.scss';
 
-import { EuiFlexGroup, EuiFlexItem, EuiIcon, EuiSpacer, EuiTitle } from '@elastic/eui';
+import { EuiFlexGroup, EuiFlexItem, EuiIcon, EuiSpacer, EuiTitle,EuiImage } from '@elastic/eui';
 import classNames from 'classnames';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
@@ -26,6 +26,8 @@ import type { LoginState } from '../../../common/login_state';
 import { DisabledLoginForm, LoginForm } from './components';
 
 import logoSvg from  '../../../../../../src/core/public/chrome/ui/images/wzyh32-32-logo.svg' ; 
+import loginlogo from  '../../../../../../src/core/public/chrome/ui/images/wzyhlogo64-64.png' ; 
+ 
 interface Props {
   http: HttpStart;
   notifications: NotificationsStart;
@@ -74,7 +76,9 @@ export class LoginPage extends Component<Props, State> {
     if (!loginState) {
       return null;
     }
-    document.title = '温州银行统一日志平台'
+   
+    
+     
     const isSecureConnection = !!window.location.protocol.match(/^https/);
     const { allowLogin, layout, requiresSecureConnection } = loginState;
 
@@ -91,12 +95,27 @@ export class LoginPage extends Component<Props, State> {
 
     return (
       <div className="loginWelcome login-form">
+         
         <header className="loginWelcome__header">
           <div className={contentHeaderClasses}>
             <EuiSpacer size="xxl" />
+            <EuiFlexGroup  gutterSize="none">
+            <EuiFlexItem>
             <span className="loginWelcome__logo">
-              <EuiIcon type={logoSvg} size="xxl" />
+              <EuiIcon  className="logo_icon" type={logoSvg} size="xxl" />    
             </span>
+            </EuiFlexItem>
+            <EuiFlexItem>
+            <EuiTitle size="m" className = "logo_title" >
+              <h1>
+                <FormattedMessage 
+                  id="xpack.security.loginPage.welcomeTitle1"
+                  defaultMessage="温州银行"
+                />
+              </h1>
+            </EuiTitle>
+            </EuiFlexItem>
+            </EuiFlexGroup>
             <EuiTitle size="m" className="loginWelcome__title">
               <h1>
                 <FormattedMessage
@@ -237,6 +256,7 @@ export class LoginPage extends Component<Props, State> {
 }
 
 export function renderLoginPage(i18nStart: CoreStart['i18n'], element: Element, props: Props) {
+ 
   ReactDOM.render(
     <i18nStart.Context>
       <LoginPage {...props} />

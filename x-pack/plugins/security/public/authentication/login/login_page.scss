@@ -9,21 +9,31 @@
 }
 
 .loginWelcome__logo {
-  @include kibanaCircleLogo;
-  @include euiBottomShadowMedium;
-
+  // @include kibanaCircleLogo;
+  // @include euiBottomShadowMedium;  
   margin-bottom: $euiSizeXL;
+  margin-left: 60%; 
 }
 
 .loginWelcome__content {
   position: relative;
   margin: auto;
   max-width: 460px;
+ // border: bisque 1px solid;
   padding-left: $euiSizeXL;
   padding-right: $euiSizeXL;
   z-index: 10;
 
   &.loginWelcome__contentDisabledForm {
     max-width: 700px;
+  }
+ 
+ 
+  .logo_title  {
+  //  margin-top: 15%;
+   // border: bisque 1px solid;
+    padding-left: 0%;
+    margin-right: 45%;
+   
   }
 }

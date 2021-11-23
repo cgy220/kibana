@@ -166,7 +166,7 @@ export class DiscoverPlugin
 
   setup(core: CoreSetup<DiscoverStartPlugins, DiscoverStart>, plugins: DiscoverSetupPlugins) {
     const baseUrl = core.http.basePath.prepend('/app/discover');
-
+  
     if (plugins.share) {
       this.urlGenerator = plugins.share.urlGenerators.registerUrlGenerator(
         new DiscoverUrlGenerator({
