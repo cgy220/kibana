@@ -26,8 +26,8 @@ import type { LoginState } from '../../../common/login_state';
 import { DisabledLoginForm, LoginForm } from './components';
 
 import logoSvg from  '../../../../../../src/core/public/chrome/ui/images/wzyh32-32-logo.svg' ; 
-import loginlogo from  '../../../../../../src/core/public/chrome/ui/images/wzyhlogo64-64.png' ; 
- 
+//import loginlogo from  '../../../../../../src/core/public/chrome/ui/images/wzyhlogo64-64.png' ; 
+import loginlogo from  '../../../../../../src/core/public/chrome/ui/images/wzyhlogin.png' ; 
 interface Props {
   http: HttpStart;
   notifications: NotificationsStart;
@@ -101,20 +101,16 @@ export class LoginPage extends Component<Props, State> {
             <EuiSpacer size="xxl" />
             <EuiFlexGroup  gutterSize="none">
             <EuiFlexItem>
-            <span className="loginWelcome__logo">
-              <EuiIcon  className="logo_icon" type={logoSvg} size="xxl" />    
+            <span style={{float:"left"}} className="loginWelcome__logo">
+            <EuiImage
+                size="l"
+                alt="Random nature image"
+                src={loginlogo}
+              />
+              {/* <EuiIcon  className="logo_icon" type={logoSvg} size="xxl" />     */}
             </span>
             </EuiFlexItem>
-            <EuiFlexItem>
-            <EuiTitle size="m" className = "logo_title" >
-              <h1>
-                <FormattedMessage 
-                  id="xpack.security.loginPage.welcomeTitle1"
-                  defaultMessage="温州银行"
-                />
-              </h1>
-            </EuiTitle>
-            </EuiFlexItem>
+           
             </EuiFlexGroup>
             <EuiTitle size="m" className="loginWelcome__title">
               <h1>
